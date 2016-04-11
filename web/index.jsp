@@ -1,22 +1,10 @@
-<%@ page import="java.io.PrintWriter" %><%-- Created by IntelliJ IDEA. --%>
+<%-- Created by IntelliJ IDEA. --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
   <head>
     <title></title>
   </head>
-  <body onload="hideBox(<%=request.getParameter("loginTest")%>)">
-
-  <script>
-    function hideBox(failedLogin) {
-      var elem = document.getElementById("failedLogin")
-      if(failedLogin == null)
-        elem.style.display = 'inline';
-      else
-        elem.style.display = 'none';
-    }
-  </script>
-
-
+  <body onload="hideBox(<%=request.getAttribute("loginTest")%>)">
   <div id="header">
     <h2> Welcome</h2>
   </div>
@@ -33,3 +21,13 @@
   </form>
   </body>
 </html>
+
+<script>
+  function hideBox(failedLogin) {
+    var elem = document.getElementById("failedLogin")
+    if (failedLogin != null && failedLogin !== "")
+      elem.style.display = 'inline'
+    else
+      elem.style.display = 'none'
+  }
+</script>
