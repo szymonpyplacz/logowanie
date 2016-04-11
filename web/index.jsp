@@ -4,18 +4,18 @@
   <head>
     <title></title>
   </head>
-  <body onload="hideBox(<%=request.getParameter("loginTest")%>)">
-
+  
   <script>
     function hideBox(failedLogin) {
       var elem = document.getElementById("failedLogin")
-      if(failedLogin == true)
-        elem.style.display = 'inline';
+      if(failedLogin != true)
+        elem.style.display = "none";
       else
-        elem.style.display = 'none';
+        elem.style.display = "inline";
     }
   </script>
-
+  
+  <body onload="hideBox(<%=request.getAttribute("loginTest")%>)">
 
   <div id="header">
     <h2> Welcome</h2>
@@ -23,8 +23,6 @@
   <div id="failedLogin" style="display: inline">
     <h4>failed login attempt</h4>
   </div>
-
-
 
   <form method="post" action="/Login">
     <input name="user" placeholder="user name"/><br>

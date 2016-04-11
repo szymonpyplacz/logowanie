@@ -1,6 +1,5 @@
 package servlets;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.*;
@@ -19,7 +18,7 @@ public class Login extends HttpServlet {
         }
         else{
             request.setAttribute("loginTest", Boolean.TRUE);
-            response.sendRedirect("index.jsp");
+            request.getRequestDispatcher("index.jsp").forward(request,response);
     }
     }
 
