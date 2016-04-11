@@ -9,7 +9,7 @@
   <script>
     function hideBox(failedLogin) {
       var elem = document.getElementById("failedLogin")
-      if(failedLogin == null)
+      if(failedLogin == true)
         elem.style.display = 'inline';
       else
         elem.style.display = 'none';

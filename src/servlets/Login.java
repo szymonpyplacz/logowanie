@@ -18,7 +18,7 @@ public class Login extends HttpServlet {
             response.sendRedirect("login.jsp");
         }
         else{
-            request.setAttribute("loginTest", "chuj");
+            request.setAttribute("loginTest", Boolean.TRUE);
             response.sendRedirect("index.jsp");
     }
     }
