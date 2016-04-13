@@ -14,6 +14,10 @@ public class Login extends HttpServlet {
         PrintWriter out = response.getWriter();
         if("admin".equals( request.getParameter("user")) && "admin".equals(request.getParameter("pass")))
         {
+            Cookie login = new Cookie("user", request.getParameter("user"));
+            request.setAttribute("user", userName);
+            response.addCookie(login);
+            request.getRequestDispatcher("login.jsp").forward(request,response);
             response.sendRedirect("login.jsp");
         }
         else{

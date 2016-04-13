@@ -11,6 +11,8 @@
     <title>Music</title>
 </head>
 <body>
-This is music that you have listened, my bro!
+All you discography
+
+<a href="login.jsp">return</a>
 </body>
 </html>

@@ -23,11 +23,23 @@
   <div id="failedLogin" style="display: inline">
     <h4>failed login attempt</h4>
   </div>
+  <div id="login">
+    <p>Login to your account</p>
+    <form method="post" action="/Login">
+      <input name="user" placeholder="user name"/><br>
+      <input name="pass" placeholder="password" type="password"/><br><br>
+      <input type="submit" value="Login" name="begin"/><br><br>
+    </form>
+  </div>
+  <div id="register">
+    <p>Create a new account</p>
+    <form method="post" action="/register">
+      <input name="user" placeholder="user name"/><br>
+      <input name="pass" placeholder="password" type="password"/><br>
+      <input name="pass" placeholder="repeat password" type="password"/><br><br>
+      <input type="submit" value="Register" name="begin"/><br><br>
+    </form>
+  </div>
 
-  <form method="post" action="/Login">
-    <input name="user" placeholder="user name"/><br>
-    <input name="pass" placeholder="password" type="password"/><br><br>
-    <input type="submit" value="Login" name="begin"/><br><br>
-  </form>
   </body>
 </html>
